@@ -1,0 +1,87 @@
+*{
+    font-family: 'Lato';
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* side-nav bar */
+.side-nav{
+    width: 5%;
+    height: 80vh;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    list-style: none;
+}
+
+.main{
+    display: flex;
+}
+
+.upper{
+    width: 100%;
+    height: 40vh;
+    background-color: brown;
+    justify-content: flex-start;
+    display: flex;
+    color: white;
+}
+
+.upper-logo{
+    padding: 25px;
+    width: 250px;
+    
+}
+
+.song-details-top{
+    float: center;
+    padding: 25px;
+    list-style: none;
+}
+
+.song-controls-top{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+#top-controls{
+    padding-top: 130px;
+}
+
+
+/* bottom */
+.bottom{
+    width: 100%;
+    height: 20vh;
+    background: grey;
+    text-align: left;
+    list-style: none;
+    color: wheat;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.logo-img{
+    display: block;
+    width: 125px;
+    height: 125px;
+    padding: 10px 10px;
+}
+
+.song-details{
+    list-style: none;
+    padding-top: 25px;
+    padding-left: 5px;
+}
+
+.song-controls-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    list-style: none;
+    padding-top: 10vh;
+    padding-right: 5vh;
+}
