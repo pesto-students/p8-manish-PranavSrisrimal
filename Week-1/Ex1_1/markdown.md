@@ -49,7 +49,7 @@ After that, this is the basic flow of the rendering engine:
 1. The rendering engine will start parsing the HTML document and convert elements to **DOM**  nodes in a tree called the "content tree". The engine will parse the style data, both in external CSS files and in style elements. 
 
 2. Styling information together with visual instructions in the HTML will be used to create another tree: the **render tree**. 
-* The render tree contains rectangles with visual attributes like color and dimensions. The rectangles are in the right order to be displayed on the screen.
+    * The render tree contains rectangles with visual attributes like color and dimensions. The rectangles are in the right order to be displayed on the screen.
 4. After the construction of the render tree it goes through a **layout** process. This means giving each node the exact coordinates where it should appear on the screen. 
 
 5. The next stage is  **painting**  - the render tree will be traversed and each node will be painted using the UI backend layer.
@@ -178,3 +178,7 @@ CSS2 defines the order of the painting process. This is actually the order in wh
 3.  border
 4.  children
 5.  outline
+
+### References 
+1. [Kruno: How browsers work | JSUnconf 2017](https://www.youtube.com/watch?v=0IsQqJ7pwhw&t=214s)
+2. [How browsers work](https://web.dev/howbrowserswork)
