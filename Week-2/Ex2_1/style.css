@@ -1,0 +1,13 @@
+*{
+    font-family: 'Circular Pro Medium';
+}
+
+.main-content{
+    display: flex;
+    
+}
+
+/* .img{
+    height: 1rem;
+    width: 1rem;
+} */
