@@ -1,58 +1,65 @@
-h1{
-  width: 0;
+h1 {
+  position: absolute;
+  z-index: 0;
 }
 
-h1:hover{
-    width: 100%;
+.main-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.main{
-    display: flex; 
-    height: 100vh;
-    align-items: center; 
-    justify-content: center; 
+.container {
+  display: flex;
+  height: 200px;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 1;
 }
 
-/* .left-col{
-    position: relative;
-    left: 60%;
+.top-left {
+  width: 100px;
+  height: 100px;
+  background-color: red;
 }
 
-.right-col{
-    position: relative;
-    left: 20%;
-} */
-
-.top-left{
-    width: 100px;
-    height: 100px;
-    background-color: red;
+.container:hover .top-left {
+  transform: rotateZ(90deg) translateY(100px);
+  transition-duration: 2s;
 }
 
-.top-left:hover{
-    transform: rotateZ(90deg);
-    transition-duration: 2.5s;
+.top-right {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
 }
 
-.top-right{
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
+.container:hover .top-right {
+  transform: rotateZ(-90deg) translateY(100px);
+  transition-duration: 2s;
 }
 
-.top-right:hover{
-    transform: rotateZ(90deg);
-    transition-duration: 5s;
+.bottom-left {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
 }
 
-.bottom-left{
-    width: 100px;
-    height: 100px;
-    background-color: blue;
+.container:hover .bottom-left {
+  transform: rotateZ(-90deg) translateY(-100px);
+  transition-duration: 2s;
 }
 
-.bottom-right{
-    width: 100px;
-    height: 100px;
-    background-color: green;
+.bottom-right {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+.container:hover .bottom-right {
+  transform: rotateZ(90deg) translateY(-100px);
+  transition-duration: 2s;
 }
