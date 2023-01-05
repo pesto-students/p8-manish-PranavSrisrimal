@@ -1,7 +1,5 @@
 h1{
-    top: 50%;
-    left: 50%;
-  /* width: 0; */
+  width: 0;
 }
 
 h1:hover{
