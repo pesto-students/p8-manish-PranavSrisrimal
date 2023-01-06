@@ -1,0 +1,136 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #66bfbf;
+  border-radius: 0.5rem 0.5rem;
+  text-align: center;
+  padding: 0.1rem 0.1rem;
+  height: 2rem;
+  font-size: 1.5em;
+}
+
+header {
+  text-align: center;
+  background-color: #bbe4e9;
+  border-radius: 0.5rem 0.5rem;
+  padding: 0.1rem 0.1rem;
+}
+
+p {
+  background-color: #bae6fd;
+  border-radius: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.main-content {
+  display: flex;
+}
+
+.main-content {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.first-col {
+  margin-right: 0.5rem;
+}
+
+img {
+  height: 50vh;
+  width: 100%;
+}
+
+@media all and (max-width: 767px) {
+  .main-content {
+    flex-direction: column;
+  }
+}
+
+#form-header {
+  text-align: center;
+  background-color: #66bfbf;
+  height: 3rem;
+  border-radius: 0.5rem 0.5rem;
+  padding-top: 0.5rem;
+}
+
+form {
+  font-size: 1.25rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  border: 4px solid hsl(0, 0%, 90%);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 0.5rem;
+  width: 50%;
+}
+label {
+  font-weight: bold;
+}
+
+input {
+  height: 1.5rem;
+  width: 150%;
+  font-size: 1.25rem;
+  padding: 0.5rem 0.5rem;
+}
+
+button {
+  background-color: #bae6fd;
+  height: 2.5rem;
+  border-radius: 1rem 1rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+#submit:hover {
+  font-weight: bold;
+  background-color: green;
+}
+
+#reset:hover {
+  font-weight: bold;
+  background-color: red;
+}
+
+#country {
+  height: 2rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.footer {
+  background-color: #66bfbf;
+  padding: 1rem;
+  text-align: center;
+  color: black;
+  list-style: none;
+  margin-top: 1.5rem;
+  border-radius: 1rem 1rem;
+  font-size: 1.5rem;
+}
+
+.footer .link {
+  color: black;
+}
+
+.footer .footer-header {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.list-item-inline {
+  list-style: none;
+  text-align: left;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+}
