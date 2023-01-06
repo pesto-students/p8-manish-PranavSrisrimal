@@ -1,15 +1,49 @@
 *{
-    font-family: 'Circular Pro Medium';
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:  #66bfbf;
+    border-radius: 0.5rem 0.5rem;
+    text-align: center;
+    padding: 0.1rem 0.1rem;
+    height: 2rem;
+   
+}
+
+header{
+    text-align: center;
+    background-color:  #bbe4e9;
+    border-radius: 0.5rem 0.5rem;
+    padding: 0.1rem 0.1rem;
+}
+
+p{
+    background-color:  #bae6fd;
+    border-radius: 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+
 }
 
 .main-content{
     display: flex;
-    
 }
 
+.main-content{
+    margin-right: 0.5rem;
+}
+
+.first-col{
+    margin-right: 0.5rem;
+}
+
+
 img{
-    height: 250px;
-    width: 250px;
+    height: 50%;
+    width: 100%;
+    border: 2px;
+    border-color: black;
 }
 
 @media all and (max-width: 767px){
