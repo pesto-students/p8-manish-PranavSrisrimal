@@ -1,0 +1,27 @@
+# README
+
+## Assignment 2.1
+---
+Created webpage according to specifications as mentioned in the document
+
+HTML-
+1. Forms and validation for each field.
+2.  `<div>`  , `<article>` , `<header>`, `<footer>` tags for respective use cases.
+
+CSS-
+   1. ID, class, universal and type selectors.
+   2. Media query.
+   3. Various types of fonts, colors and styling.
+
+<br>
+
+---
+
+## Assignment 2.2
+
+* Created 4 squares placed in 2 `<div>` tags in column format
+* Flex box for arranging and placing all squares at page center
+* transition : rotation and translation to achieve desired effect 
+
+---
+
