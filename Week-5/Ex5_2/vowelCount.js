@@ -1,24 +1,22 @@
 function vowelCount(input) {
-  const vowels = ['a','e','i','o','u'];
-  const vowCount = new Map();
+  const vowels = "aeiou";
+  const vowCount = new Map([
+    ["a", 0],
+    ["e", 0],
+    ["i", 0],
+    ["o", 0],
+    ["u", 0],
+  ]);
 
   for (var i = 0; i < input.length; i++) {
     letter = input[i].toLowerCase();
 
-    if (vowels.includes(letter)) {
-
-        if ((vowCount.get(letter) == undefined)){
-                vowCount.set(letter, 0);
-                vowCount.set(letter, vowCount.get(letter) + 1);
-        } 
-    
-        else {
-        vowCount.set(letter, vowCount.get(letter) + 1);
-        }        
+    if (vowels.indexOf(letter) > -1) {
+      vowCount.set(letter, vowCount.get(letter) + 1);
     }
-  }  
+  }
 
   return vowCount;
 }
 
-console.log(vowelCount("AbcaaaEEuuIi^&oo")); // Map(5) { 'a' => 4, 'e' => 2, 'u' => 2, 'i' => 2, 'o' => 2 }
+console.log(vowelCount("bcAuai$aaes^aaoq")); // Map(5) { 'a' => 6, 'e' => 1, 'i' => 1, 'o' => 1, 'u' => 1 }
