@@ -4,12 +4,10 @@ function getNumber() {
     setTimeout(() => {
       if (Math.floor(Math.random() * 100) % 5 == 0){
         res("Resolved : Not divisible by 5");
-        console.timeEnd();
       } else {
         rej("Rejected : Divisible by 5");
-        console.timeEnd();
       }
-    }, 2000);
+    }, 1500);
   });
 }
 
@@ -32,3 +30,13 @@ function CustomPromise(executor) {
   }
   executor(res, rej);
 }
+
+getNumber()
+  .then((res) => {
+    console.log(res);
+    console.timeEnd();
+  })
+  .catch((err) => {
+    console.log(err);
+    console.timeEnd();
+  });
