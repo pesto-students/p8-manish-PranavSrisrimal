@@ -1,16 +1,34 @@
-function getRandom(){
-    setTimeout( function(){
-        let x = Math.floor(Math.random() * 100);
-        if (x % 5 == 0){
-        return console.log(x);
-        }
-        else return console.log(x + " Not divisible by 5");
-    }, 0)
+function getNumber() {
+  return new CustomPromise((res, rej) => {
+    console.time();
+    setTimeout(() => {
+      if (Math.floor(Math.random() * 100) % 5 == 0){
+        res("Resolved : Not divisible by 5");
+        console.timeEnd();
+      } else {
+        rej("Rejected : Divisible by 5");
+        console.timeEnd();
+      }
+    }, 2000);
+  });
 }
 
-getRandom();
-
-//make a class 
-class customPromise(){
-    
+function CustomPromise(executor) {
+  let onResolve;
+  let onReject;
+  this.then = function (fn) {
+    onResolve = fn;
+    return this; // for chaining
+  };
+  this.catch = function (fn) {
+    onReject = fn;
+    return this; //for chaining
+  };
+  function res(val) {
+    onResolve(val);
+  }
+  function rej(val) {
+    onReject(val);
+  }
+  executor(res, rej);
 }
