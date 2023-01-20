@@ -51,3 +51,26 @@ function doTask3(){
         }
     });
 }
+
+async function doAsync(){
+    try{
+        let op = await Promise.allSettled([doTask1(),doTask2(),doTask3()]).then((result) => {console.log(result);}).catch((error) => {console.log(error)});
+        return op;
+    }
+    catch(error){
+        console.log("Async/Await failed");
+    }
+}
+
+
+
+// Output of Async/Await
+doAsync();
+
+/* 
+Given code uses -
+    1. Async/Await
+    2. Generators - To generate two random numbers
+    3. Functions - Returns Promise in resolved or rejected state
+    4. Promise.allSettled - Gives us status and value of what the returned Promise carries from doTask1(), doTask2() and doTask3()
+*/
