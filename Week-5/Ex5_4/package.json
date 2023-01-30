@@ -1,0 +1,14 @@
+{
+  "name": "ex5_4",
+  "version": "1.0.0",
+  "description": "jest ",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+   },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
