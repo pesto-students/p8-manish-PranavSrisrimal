@@ -1,8 +1,3 @@
-# 3Sum.js
+# Mock Interview - HTML, CSS, JS
 
-1. 3Sum Complexity
-- Time complexity - O(N<sup>2</sup>) 
-- Space complexity - O(1)
-
----
-*Added 2Sum.js as a practice attempt.*
+**No assignments to submit  this week**
