@@ -10,12 +10,6 @@ class LinkedList {
     this.head = null;
     this.size = 0;
   }
-
-  // Insert first node
-  insertFirst(data) {
-    this.head = new Node(data, this.head);
-    this.size++;
-  }
   // Insert at last
   insertLast(data) {
     let current = this.head;
@@ -30,51 +24,6 @@ class LinkedList {
     }
     this.size++;
   }
-
-  // Insert at index
-  insertAt(data, index) {
-    if (index > 0 && index > this.size) {
-      return;
-    }
-
-    if (index === 0) {
-      this.insertFirst(data);
-    } else if (index === this.size) {
-      this.insertLast(data);
-    } else {
-      const node = new Node(data);
-      let current, previous;
-      let count = 0;
-
-      current = this.head;
-
-      while (count < index) {
-        previous = current;
-        count++;
-        current = current.next;
-      }
-      node.next = current;
-      previous.next = node;
-      this.size++;
-    }
-  }
-  // Get at index
-  getAt(index) {
-    let current = this.head;
-    let count = 0;
-
-    if (index === 0) {
-      return current.data;
-    } else if (index > 0 && index < this.size) {
-      while (count < index) {
-        current = current.next;
-        count++;
-      }
-      console.log(current.data);
-    }
-    return null;
-  }
-
   // Remove at index
   removeAt(index) {
     let current = this.head,
@@ -94,12 +43,6 @@ class LinkedList {
     this.size--;
   }
 
-  // Clear list
-  clearList() {
-    this.head = null;
-    this.size = 0;
-  }
-
   // Print list
   printListData() {
     let current = this.head,
@@ -111,32 +54,22 @@ class LinkedList {
     console.log(output);
   }
 
-  reverseList() {
-    let current = this.head.next,
-      previous,
-      tail;
-    previous = this.head;
-
-    while (current != null) {
-      tail = current.next;
-      current.next = previous;
-      previous = current;
-      current = tail;
+  rotateList(k) {
+    let current;
+    for (let i = 1; i <= k; i++) {
+      current = this.head;
+      this.insertLast(current.data);
+      this.removeAt(0);
+      console.log(`Rotate ${i} `);
+      this.printListData();
     }
-    this.head.next = null;
-    this.head = previous;
   }
 }
 const ll = new LinkedList();
-ll.insertFirst(700);
-ll.insertFirst(800);
-ll.insertFirst(900);
-ll.insertFirst(1000);
-ll.insertLast(600);
-ll.insertAt(500, 0);
-ll.insertAt(400, 6);
-ll.insertAt(300, 2);
+ll.insertFirst(9);
+ll.insertFirst(8);
+ll.insertFirst(7);
+ll.insertFirst(4);
+ll.insertFirst(2);
 ll.printListData();
-ll.reverseList();
-console.log("Reversed list : ");
-ll.printListData();
+ll.rotateList(3); // k = 3
