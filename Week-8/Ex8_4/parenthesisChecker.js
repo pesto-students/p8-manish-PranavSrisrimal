@@ -26,8 +26,6 @@ class Stack {
         continue;
       }
 
-      console.log(this.items);
-
       let value;
       switch (bracket) {
         case ")":
