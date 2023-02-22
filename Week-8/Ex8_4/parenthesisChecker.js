@@ -5,8 +5,8 @@ class Stack {
   }
 
   push(element) {
-    this.count++;
     this.items[this.count] = element;
+    this.count++;
   }
 
   pop() {
