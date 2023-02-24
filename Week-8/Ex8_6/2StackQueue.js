@@ -33,6 +33,11 @@ class Stack {
       return false;
     }
   }
+
+  reset() {
+    this.items = {};
+    this.index = -1;
+  }
 }
 const s1 = new Stack();
 const s2 = new Stack();
@@ -49,7 +54,7 @@ function queue(arr) {
       s1.push(arr[i + 1]);
       i += 2;
     }
-    // Pop 
+    // Pop
     else if (arr[i] === 2) {
       if (s1.isEmpty() === false && s2.isEmpty() === true) {
         while (s1.isEmpty() === false) {
@@ -72,5 +77,7 @@ function queue(arr) {
 
   return output;
 }
-console.log(queue([1, 2, 1, 3, 2, 1, 4, 2])); [2,3]
-console.log(queue([1, 2, 2, 2, 1, 4])); // [2,-1]
+console.log("Case 1: ", queue([1, 2, 1, 3, 2, 1, 4, 2])); // [2,3]
+s1.reset();
+s2.reset();
+console.log("Case 2: ", queue([1, 2, 2, 2, 1, 4])); // [2,-1]
