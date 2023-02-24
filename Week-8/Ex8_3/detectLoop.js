@@ -103,6 +103,6 @@ ll.insertLast(7);
 ll.printListData();
 
 // Case 1
-console.log("Case 1: ",ll.defineLoop(0, 6));
+console.log("Case 1: ", ll.defineLoop(0, 6));
 // Case 2
-console.log("Case 2: ",ll.defineLoop(4, 6));
+console.log("Case 2: ", ll.defineLoop(4, 6));

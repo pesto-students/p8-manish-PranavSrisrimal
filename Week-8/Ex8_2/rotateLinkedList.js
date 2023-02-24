@@ -10,6 +10,11 @@ class LinkedList {
     this.head = null;
     this.size = 0;
   }
+  // Insert first node
+  insertFirst(data) {
+    this.head = new Node(data, this.head);
+    this.size++;
+  }
   // Insert at last
   insertLast(data) {
     let current = this.head;
