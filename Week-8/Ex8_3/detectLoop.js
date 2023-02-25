@@ -74,22 +74,30 @@ class LinkedList {
     let current = this.head,
       pointer = new Node();
     for (let i = 0; i < N; i++) {
-      if (i == x - 1) {
+      if (i === x - 1) {
         pointer.data = current.data;
+        pointer.next = current.next;
       }
       if (i === N - 1) {
-        current.next = pointer.data;
+        current.next = pointer;
         break;
       }
-      // console.log(current.data);
       current = current.next;
     }
+  }
 
-    if (current.next != null) {
-      return "Loop present";
-    } else {
-      return "Loop absent";
+  detectLoop() {
+    let fast = this.head,
+      slow = this.head;
+    while (fast && fast.next) {
+      slow = slow.next;
+      fast = fast.next.next;
+
+      if (slow === fast) {
+        return true;
+      }
     }
+    return false;
   }
 }
 
@@ -103,6 +111,10 @@ ll.insertLast(7);
 ll.printListData();
 
 // Case 1
-console.log("Case 1: ", ll.defineLoop(0, 6));
+console.log("Case 1: ");
+ll.defineLoop(0, 6);
+console.log(ll.detectLoop());
 // Case 2
-console.log("Case 2: ", ll.defineLoop(4, 6));
+console.log("Case 2: ");
+ll.defineLoop(5, 6);
+console.log(ll.detectLoop());
