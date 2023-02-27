@@ -61,7 +61,9 @@ class LinkedList {
 
   rotateList(k) {
     let current;
+    k = k % this.size;
     for (let i = 1; i <= k; i++) {
+      console.log(i);
       current = this.head;
       this.insertLast(current.data);
       this.removeAt(0);
