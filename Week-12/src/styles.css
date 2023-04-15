@@ -1,0 +1,67 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  background-color: #7dd3fc;
+}
+ul {
+  list-style: none;
+}
+
+ul > li {
+  border: 2px solid #000000;
+  border-radius: 1rem;
+  margin: 10px;
+  padding: 15px;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #7dd3fc;
+}
+
+ul > li:hover {
+  background-color: #38bdf8;
+}
+
+ul li .actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  height: 20px;
+  width: fit-content;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0.25rem;
+}
+button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.add-btn {
+  padding: 15px 25px 30px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.add-popup {
+  border: 2px solid #000;
+  display: flex;
+  width: 75%;
+  padding: 15px;
+  gap: 10px;
+}
+.add-popup > input {
+  border: 1px solid #000;
+}
+.add-popup > button {
+  margin-right: 0px;
+}
