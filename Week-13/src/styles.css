@@ -1,0 +1,40 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  color: blue;
+}
+
+.navbar-info {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-user-actions {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+.body {
+  background-color: lightslategray;
+}
+.body-img {
+  height: 200px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+
+.footer ul {
+  list-style-type: none;
+}
